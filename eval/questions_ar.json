@@ -1,0 +1,460 @@
+{
+  "_schema": {
+    "id": "stable question id",
+    "question_ar": "the Arabic query as a user would type it",
+    "gold_en": "a faithful English translation, used only by the minilm-gold-en upper-bound config",
+    "register": "msa | saudi | terminology | ambiguous",
+    "relevant": "chunk ids (<doc>#<section-slug>) that answer the question; any one in top-k counts as a hit",
+    "notes": "why the question is in the set, if not obvious"
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "question_ar": "ما هو الحد الأدنى من الثروة الذي تجب فيه الزكاة؟",
+      "gold_en": "What is the minimum amount of wealth on which zakat becomes due?",
+      "register": "msa",
+      "relevant": ["zakat#the-nisab-threshold"],
+      "notes": "Describes nisab without using the word."
+    },
+    {
+      "id": "q02",
+      "question_ar": "ما المحظورات الثلاثة الأساسية في التمويل الإسلامي؟",
+      "gold_en": "What are the three basic prohibitions in Islamic finance?",
+      "register": "msa",
+      "relevant": ["islamic_finance#the-three-prohibitions"],
+      "notes": ""
+    },
+    {
+      "id": "q03",
+      "question_ar": "لماذا يُعد شراء السيارة نقداً الخيار الأرخص عادةً؟",
+      "gold_en": "Why is buying a car in cash usually the cheapest option?",
+      "register": "msa",
+      "relevant": ["car_financing#paying-cash"],
+      "notes": ""
+    },
+    {
+      "id": "q04",
+      "question_ar": "ما المبلغ الذي ينبغي الاحتفاظ به في صندوق الطوارئ؟",
+      "gold_en": "How much money should be kept in an emergency fund?",
+      "register": "msa",
+      "relevant": ["emergency_fund#how-much-is-enough"],
+      "notes": ""
+    },
+    {
+      "id": "q05",
+      "question_ar": "أين يجب أن أحتفظ بمدخرات الطوارئ؟",
+      "gold_en": "Where should I keep my emergency savings?",
+      "register": "msa",
+      "relevant": ["emergency_fund#where-to-keep-it"],
+      "notes": ""
+    },
+    {
+      "id": "q06",
+      "question_ar": "هل تجب الزكاة على السيارة والمنزل المخصصين للاستعمال الشخصي؟",
+      "gold_en": "Is zakat due on a car and a house kept for personal use?",
+      "register": "msa",
+      "relevant": ["zakat#what-you-pay-zakat-on", "zakat#how-a-large-purchase-affects-your-zakat-base"],
+      "notes": "The exemption is stated in what-you-pay-zakat-on; the car example is in the purchase section."
+    },
+    {
+      "id": "q07",
+      "question_ar": "كيف يُحسب مقدار الزكاة الواجبة على المدخرات والاستثمارات؟",
+      "gold_en": "How is the amount of zakat due on savings and investments calculated?",
+      "register": "msa",
+      "relevant": ["zakat#the-calculation"],
+      "notes": ""
+    },
+    {
+      "id": "q08",
+      "question_ar": "ما هو التأمين التكافلي وكيف يتجنب الغرر؟",
+      "gold_en": "What is takaful insurance and how does it avoid gharar?",
+      "register": "msa",
+      "relevant": ["islamic_finance#takaful-cooperative-insurance"],
+      "notes": "Neither تأمين nor غرر is in the router map."
+    },
+    {
+      "id": "q09",
+      "question_ar": "ما نسبة ضريبة القيمة المضافة في المملكة وكيف تؤثر على سعر الشراء؟",
+      "gold_en": "What is the VAT rate in the Kingdom and how does it affect the purchase price?",
+      "register": "msa",
+      "relevant": ["financial_planning#vision-2030-context"],
+      "notes": "Tax vocabulary is not in the router map."
+    },
+    {
+      "id": "q10",
+      "question_ar": "ما هي نسبة الدين إلى الدخل التي تُعد مقبولة؟",
+      "gold_en": "What debt-to-income ratio is considered acceptable?",
+      "register": "msa",
+      "relevant": ["financial_planning#know-your-four-numbers"],
+      "notes": ""
+    },
+    {
+      "id": "q11",
+      "question_ar": "ما الفرق بين عقد المضاربة والمشاركة المتناقصة؟",
+      "gold_en": "What is the difference between a mudaraba contract and diminishing musharaka?",
+      "register": "msa",
+      "relevant": ["islamic_finance#mudaraba-and-musharaka-partnership"],
+      "notes": "Contract names absent from router map."
+    },
+    {
+      "id": "q12",
+      "question_ar": "ما الرسوم الإدارية التي يسمح بها البنك المركزي على تمويل السيارات؟",
+      "gold_en": "What administrative fees does the central bank allow on car financing?",
+      "register": "msa",
+      "relevant": ["car_financing#murabaha-the-standard-islamic-auto-finance"],
+      "notes": "Plural السيارات does not contain the key سيارة (ة vs ات), so only 'financing loan' is routed."
+    },
+    {
+      "id": "q13",
+      "question_ar": "ما أهمية مراجعة الميزانية بشكل دوري ومتى يجب إعادة بنائها؟",
+      "gold_en": "Why is it important to review the budget regularly, and when should it be rebuilt?",
+      "register": "msa",
+      "relevant": ["budgeting#review-cadence"],
+      "notes": ""
+    },
+    {
+      "id": "q14",
+      "question_ar": "ما مكونات مؤشر الصحة المالية وكيف يُستخدم؟",
+      "gold_en": "What are the components of the financial health score and how is it used?",
+      "register": "msa",
+      "relevant": ["financial_planning#a-financial-health-score"],
+      "notes": ""
+    },
+    {
+      "id": "q15",
+      "question_ar": "هل يمكن الاعتماد على مكافأة نهاية الخدمة كمصدر للتقاعد؟",
+      "gold_en": "Can end-of-service benefits be relied on as a source of retirement income?",
+      "register": "msa",
+      "relevant": ["financial_planning#vision-2030-context"],
+      "notes": "Router matches تقاعد -> 'retirement planning', which has no dedicated section."
+    },
+    {
+      "id": "q16",
+      "question_ar": "كيف أحدد أهدافي المالية بطريقة صحيحة؟",
+      "gold_en": "How do I set my financial goals properly?",
+      "register": "msa",
+      "relevant": ["financial_planning#plan-around-goals-not-products"],
+      "notes": "أهدافي (plural) does not contain the key هدف."
+    },
+    {
+      "id": "q17",
+      "question_ar": "كم لازم يكون عندي فلوس احتياط عشان لو انفصلت من الشغل؟",
+      "gold_en": "How much reserve money should I have in case I get laid off from work?",
+      "register": "saudi",
+      "relevant": ["emergency_fund#how-much-is-enough"],
+      "notes": "Dialect synonym (احتياط) for emergency fund."
+    },
+    {
+      "id": "q18",
+      "question_ar": "المؤجر يبي الإيجار كامل مقدم، كيف أجهز له؟",
+      "gold_en": "The landlord wants the full rent up front, how do I prepare for it?",
+      "register": "saudi",
+      "relevant": ["budgeting#the-50-30-20-rule-adapted-for-saudi-salaries", "saving_strategies#sinking-funds-for-lumpy-costs"],
+      "notes": "Rent is not in the router map."
+    },
+    {
+      "id": "q19",
+      "question_ar": "وش الأفضل أشتري السيارة كاش ولا بالأقساط؟",
+      "gold_en": "Which is better, buying the car in cash or in installments?",
+      "register": "saudi",
+      "relevant": ["car_financing#paying-cash", "car_financing#the-decision-rule"],
+      "notes": ""
+    },
+    {
+      "id": "q20",
+      "question_ar": "اشتراكاتي في التطبيقات كثيرة، هل فعلاً تفرق بالميزانية؟",
+      "gold_en": "I have a lot of app subscriptions, do they really make a difference to the budget?",
+      "register": "saudi",
+      "relevant": ["budgeting#categories-that-quietly-leak-money"],
+      "notes": ""
+    },
+    {
+      "id": "q21",
+      "question_ar": "أطلب من تطبيقات التوصيل كل يوم تقريباً، كم ممكن يطلع علي بالشهر؟",
+      "gold_en": "I order from delivery apps almost every day, how much could that come to per month?",
+      "register": "saudi",
+      "relevant": ["budgeting#categories-that-quietly-leak-money"],
+      "notes": ""
+    },
+    {
+      "id": "q22",
+      "question_ar": "راتبي زاد، وش أسوي بالزيادة عشان ما تروح على الكماليات؟",
+      "gold_en": "My salary went up, what should I do with the raise so it doesn't go on luxuries?",
+      "register": "saudi",
+      "relevant": ["saving_strategies#automate-then-forget"],
+      "notes": "Router reduces this to 'salary income'."
+    },
+    {
+      "id": "q23",
+      "question_ar": "كيف أجمع فلوس العمرة بدون ما أتسلف؟",
+      "gold_en": "How do I save up money for Umrah without borrowing?",
+      "register": "saudi",
+      "relevant": ["saving_strategies#sinking-funds-for-lumpy-costs"],
+      "notes": ""
+    },
+    {
+      "id": "q24",
+      "question_ar": "صرفت من فلوس الطوارى على تصليح المكيف، وش أسوي الحين؟",
+      "gold_en": "I spent some of my emergency money fixing the air conditioner, what should I do now?",
+      "register": "saudi",
+      "relevant": ["emergency_fund#rebuilding-after-you-use-it"],
+      "notes": "Common hamza-less spelling الطوارى does not contain the key طوارئ."
+    },
+    {
+      "id": "q25",
+      "question_ar": "أبي أحول جزء من معاشي أول ما ينزل لحساب ثاني، كيف أسويها؟",
+      "gold_en": "I want to transfer part of my salary to another account as soon as it lands, how do I do that?",
+      "register": "saudi",
+      "relevant": ["saving_strategies#pay-yourself-first"],
+      "notes": "معاش is everyday Saudi for salary; not in the map."
+    },
+    {
+      "id": "q26",
+      "question_ar": "أسدد القرض الشخصي أول ولا أبدأ أحوش؟",
+      "gold_en": "Should I pay off the personal loan first or start saving?",
+      "register": "saudi",
+      "relevant": ["saving_strategies#order-of-operations"],
+      "notes": "أحوش (dialect: to save up) is not in the map; only قرض matches."
+    },
+    {
+      "id": "q27",
+      "question_ar": "كم تطلع زكاتي إذا عندي ربع مليون بالبنك؟",
+      "gold_en": "How much would my zakat be if I have a quarter of a million in the bank?",
+      "register": "saudi",
+      "relevant": ["zakat#the-calculation"],
+      "notes": "زكاتي (my zakat): the possessive turns ة into ت, so the key زكاة does not match."
+    },
+    {
+      "id": "q28",
+      "question_ar": "أنا مقيم وإقامتي مربوطة بالشغل، كم شهر لازم أحتاط؟",
+      "gold_en": "I'm an expat and my residency is tied to my job, how many months should I keep in reserve?",
+      "register": "saudi",
+      "relevant": ["emergency_fund#how-much-is-enough"],
+      "notes": ""
+    },
+    {
+      "id": "q29",
+      "question_ar": "كيف أعرف كم الفائض اللي يتبقى لي آخر الشهر؟",
+      "gold_en": "How do I work out the surplus that is left over at the end of the month?",
+      "register": "saudi",
+      "relevant": ["budgeting#build-the-budget-from-your-actual-cash-flow", "financial_planning#know-your-four-numbers"],
+      "notes": ""
+    },
+    {
+      "id": "q30",
+      "question_ar": "أسكن في المدينة وأبي أعرف كم المفروض أصرف على السكن من راتبي",
+      "gold_en": "I live in Madinah and want to know how much of my salary I should spend on housing",
+      "register": "saudi",
+      "relevant": ["budgeting#intro", "budgeting#the-50-30-20-rule-adapted-for-saudi-salaries"],
+      "notes": "False positive: المدينة contains the key دين, so the router adds 'debt'."
+    },
+    {
+      "id": "q31",
+      "question_ar": "كم نسبة من راتبي المفروض أدخر كل شهر؟",
+      "gold_en": "What percentage of my salary should I save each month?",
+      "register": "saudi",
+      "relevant": ["budgeting#the-50-30-20-rule-adapted-for-saudi-salaries"],
+      "notes": "The verb أدخر does not contain the noun key ادخار."
+    },
+    {
+      "id": "q32",
+      "question_ar": "هل آخذ قروض شخصية عشان أدفع الإيجار؟",
+      "gold_en": "Should I take personal loans to pay the rent?",
+      "register": "saudi",
+      "relevant": ["budgeting#the-50-30-20-rule-adapted-for-saudi-salaries"],
+      "notes": "Plural قروض does not contain the key قرض."
+    },
+    {
+      "id": "q33",
+      "question_ar": "البنك قال لي نسبة الربح ٥٪ ثابتة، كيف أعرف كم بدفع بالمجموع؟",
+      "gold_en": "The bank told me the profit rate is a flat 5%, how do I know how much I'll pay in total?",
+      "register": "saudi",
+      "relevant": ["car_financing#murabaha-the-standard-islamic-auto-finance"],
+      "notes": "Tests the flat-rate ambiguity paragraph; no router keyword."
+    },
+    {
+      "id": "q34",
+      "question_ar": "هل أي منتج مكتوب عليه اسلامي يكون متوافق مع الشريعة؟",
+      "gold_en": "Is any product labelled Islamic actually Shariah-compliant?",
+      "register": "saudi",
+      "relevant": ["islamic_finance#practical-guidance"],
+      "notes": "Hamza-less اسلامي does not contain the key إسلامي."
+    },
+    {
+      "id": "q35",
+      "question_ar": "التأمين على السيارة، هل هو حلال؟",
+      "gold_en": "Is car insurance halal?",
+      "register": "saudi",
+      "relevant": ["islamic_finance#takaful-cooperative-insurance"],
+      "notes": "Router sends 'car vehicle islamic finance halal'; the answer is the takaful section."
+    },
+    {
+      "id": "q36",
+      "question_ar": "ما هو التورق وما علاقته بالمرابحة؟",
+      "gold_en": "What is tawarruq and how does it relate to murabaha?",
+      "register": "terminology",
+      "relevant": ["islamic_finance#murabaha-cost-plus-sale"],
+      "notes": "تورق is mentioned exactly once in the corpus, inside the murabaha section."
+    },
+    {
+      "id": "q37",
+      "question_ar": "هل التمويل الشخصي عن طريق التورق حلال؟",
+      "gold_en": "Is personal financing through tawarruq halal?",
+      "register": "terminology",
+      "relevant": ["islamic_finance#murabaha-cost-plus-sale"],
+      "notes": ""
+    },
+    {
+      "id": "q38",
+      "question_ar": "وش يعني تورق؟",
+      "gold_en": "What does tawarruq mean?",
+      "register": "terminology",
+      "relevant": ["islamic_finance#murabaha-cost-plus-sale"],
+      "notes": "Hardest case: single rare term, absent from router map, one mention in corpus."
+    },
+    {
+      "id": "q39",
+      "question_ar": "كيف تُحسب نسبة الربح في مرابحة السيارات؟",
+      "gold_en": "How is the profit rate calculated in car murabaha?",
+      "register": "terminology",
+      "relevant": ["car_financing#murabaha-the-standard-islamic-auto-finance"],
+      "notes": ""
+    },
+    {
+      "id": "q40",
+      "question_ar": "هل يحق لي تخفيض عند السداد المبكر لتمويل المرابحة؟",
+      "gold_en": "Am I entitled to a rebate on early settlement of murabaha financing?",
+      "register": "terminology",
+      "relevant": ["car_financing#murabaha-the-standard-islamic-auto-finance"],
+      "notes": ""
+    },
+    {
+      "id": "q41",
+      "question_ar": "ما الفرق بين هامش الربح الثابت في المرابحة ومعدل الفائدة السنوي في القرض التقليدي؟",
+      "gold_en": "What is the difference between a flat murabaha profit margin and the annual interest rate on a conventional loan?",
+      "register": "terminology",
+      "relevant": ["car_financing#conventional-riba-based-auto-loans", "car_financing#murabaha-the-standard-islamic-auto-finance"],
+      "notes": ""
+    },
+    {
+      "id": "q42",
+      "question_ar": "هل ينقطع الحول إذا نزل مالي عن النصاب قبل تمام السنة؟",
+      "gold_en": "Is the hawl interrupted if my wealth drops below nisab before the year is complete?",
+      "register": "terminology",
+      "relevant": ["zakat#the-nisab-threshold", "zakat#intro"],
+      "notes": "Fiqh terms حول / نصاب, neither in the router map."
+    },
+    {
+      "id": "q43",
+      "question_ar": "ما المقصود بالغرر والميسر في المعاملات المالية؟",
+      "gold_en": "What is meant by gharar and maysir in financial transactions?",
+      "register": "terminology",
+      "relevant": ["islamic_finance#the-three-prohibitions"],
+      "notes": ""
+    },
+    {
+      "id": "q44",
+      "question_ar": "هل تجب الزكاة على الأسهم وصناديق الاستثمار؟",
+      "gold_en": "Is zakat due on shares and investment funds?",
+      "register": "terminology",
+      "relevant": ["zakat#what-you-pay-zakat-on"],
+      "notes": ""
+    },
+    {
+      "id": "q45",
+      "question_ar": "هل تُخصم الديون المستحقة من وعاء الزكاة؟",
+      "gold_en": "Are debts that are due deducted from the zakat base?",
+      "register": "terminology",
+      "relevant": ["zakat#what-you-pay-zakat-on", "zakat#the-calculation"],
+      "notes": ""
+    },
+    {
+      "id": "q46",
+      "question_ar": "ما هي الإجارة المنتهية بالتمليك؟",
+      "gold_en": "What is ijara muntahia bittamleek (lease ending in ownership)?",
+      "register": "terminology",
+      "relevant": ["islamic_finance#ijara-leasing"],
+      "notes": "Absent from router map."
+    },
+    {
+      "id": "q47",
+      "question_ar": "هل تنقص الزكاة إذا اشتريت سيارة كاش؟",
+      "gold_en": "Does my zakat go down if I buy a car in cash?",
+      "register": "terminology",
+      "relevant": ["zakat#how-a-large-purchase-affects-your-zakat-base"],
+      "notes": ""
+    },
+    {
+      "id": "q48",
+      "question_ar": "المبلغ اللي أجمعه عشان أشتري سيارة، هل عليه زكاة؟",
+      "gold_en": "Is zakat due on the money I'm saving up to buy a car?",
+      "register": "terminology",
+      "relevant": ["zakat#how-a-large-purchase-affects-your-zakat-base"],
+      "notes": ""
+    },
+    {
+      "id": "q49",
+      "question_ar": "ودي أشتري جوال جديد غالي، كيف أعرف إذا أقدر عليه؟",
+      "gold_en": "I'd like to buy an expensive new phone, how do I know if I can afford it?",
+      "register": "ambiguous",
+      "relevant": ["saving_strategies#the-waiting-test", "emergency_fund#the-rule-that-protects-everything-else", "financial_planning#plan-around-goals-not-products", "budgeting#review-cadence"],
+      "notes": "Affordability test appears in four places."
+    },
+    {
+      "id": "q50",
+      "question_ar": "هل المرابحة أفضل؟",
+      "gold_en": "Is murabaha better?",
+      "register": "ambiguous",
+      "relevant": ["car_financing#murabaha-the-standard-islamic-auto-finance", "car_financing#conventional-riba-based-auto-loans", "islamic_finance#murabaha-cost-plus-sale", "islamic_finance#practical-guidance"],
+      "notes": "Better than what? Underspecified."
+    },
+    {
+      "id": "q51",
+      "question_ar": "من وين أبدأ عشان أرتب وضعي المالي؟",
+      "gold_en": "Where do I start to get my finances in order?",
+      "register": "ambiguous",
+      "relevant": ["saving_strategies#order-of-operations", "financial_planning#know-your-four-numbers", "financial_planning#plan-around-goals-not-products", "budgeting#build-the-budget-from-your-actual-cash-flow"],
+      "notes": ""
+    },
+    {
+      "id": "q52",
+      "question_ar": "الفلوس ما تكفي لآخر الشهر",
+      "gold_en": "The money doesn't last until the end of the month",
+      "register": "ambiguous",
+      "relevant": ["budgeting#build-the-budget-from-your-actual-cash-flow", "budgeting#categories-that-quietly-leak-money", "budgeting#intro"],
+      "notes": "A complaint, not a question."
+    },
+    {
+      "id": "q53",
+      "question_ar": "هل القرض حرام؟",
+      "gold_en": "Is a loan haram?",
+      "register": "ambiguous",
+      "relevant": ["islamic_finance#the-three-prohibitions", "car_financing#conventional-riba-based-auto-loans"],
+      "notes": ""
+    },
+    {
+      "id": "q54",
+      "question_ar": "أبي سيارة",
+      "gold_en": "I want a car",
+      "register": "ambiguous",
+      "relevant": ["car_financing#intro", "car_financing#paying-cash", "car_financing#the-decision-rule"],
+      "notes": ""
+    },
+    {
+      "id": "q55",
+      "question_ar": "وين أفضل مكان أحط فيه فلوسي؟",
+      "gold_en": "Where is the best place to put my money?",
+      "register": "ambiguous",
+      "relevant": ["emergency_fund#where-to-keep-it", "saving_strategies#automate-then-forget", "islamic_finance#mudaraba-and-musharaka-partnership"],
+      "notes": ""
+    },
+    {
+      "id": "q56",
+      "question_ar": "هل الادخار في حساب بنكي عادي فيه ربا؟",
+      "gold_en": "Does saving in an ordinary bank account involve riba?",
+      "register": "ambiguous",
+      "relevant": ["emergency_fund#where-to-keep-it", "saving_strategies#automate-then-forget", "islamic_finance#mudaraba-and-musharaka-partnership"],
+      "notes": ""
+    }
+  ]
+}
