@@ -236,12 +236,16 @@ class CohereEmbedder(Embedder):
 
 # Prices: Embed v4 text input, $0.12 / 1M tokens (third-party pricing trackers, June 2026;
 # cohere.com/pricing no longer lists per-token rates -- verify before quoting).
+# Embed 5 (released 2026-09-30): Pro $0.12 / 1M, Fast $0.08 / 1M (third-party, Oct 2026 -- verify).
+# Both v5 tiers run at 1024 dims, the same as v4, so differences come from the model, not the size.
 EMBEDDERS: dict[str, callable] = {
     "minilm": lambda: SentenceTransformerEmbedder("sentence-transformers/all-MiniLM-L6-v2"),
     "ml-minilm": lambda: SentenceTransformerEmbedder(
         "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     ),
     "cohere-v4": lambda: CohereEmbedder("embed-v4.0", price_per_1m_tokens=0.12, output_dimension=1024),
+    "cohere-v5-pro": lambda: CohereEmbedder("embed-v5.0-pro", price_per_1m_tokens=0.12, output_dimension=1024),
+    "cohere-v5-fast": lambda: CohereEmbedder("embed-v5.0-fast", price_per_1m_tokens=0.08, output_dimension=1024),
 }
 
 _instances: dict[str, Embedder] = {}

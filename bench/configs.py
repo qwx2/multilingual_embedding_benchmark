@@ -80,6 +80,10 @@ CONFIGS: list[Config] = [
            "Free multilingual: Arabic -> paraphrase-multilingual-MiniLM-L12-v2", "ml-minilm", arabic),
     Config("cohere-v4-direct", "full question — raw Arabic",
            "Cohere: Arabic -> embed-v4.0 (search_query) vs chunks (search_document)", "cohere-v4", arabic),
+    Config("cohere-v5-pro-direct", "full question — raw Arabic",
+           "Cohere: Arabic -> embed-v5.0-pro (search_query) vs chunks (search_document)", "cohere-v5-pro", arabic),
+    Config("cohere-v5-fast-direct", "full question — raw Arabic",
+           "Cohere: Arabic -> embed-v5.0-fast (search_query) vs chunks (search_document)", "cohere-v5-fast", arabic),
     Config("cohere-v4-rerank", "full question — raw Arabic",
            "Cohere embed-v4.0 top-20 -> rerank-v4.0-fast", "cohere-v4", arabic, reranker="rerank-fast"),
 ]

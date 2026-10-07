@@ -35,6 +35,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **emergency_fund#how-much-is-enough**, financial_planning#know-your-four-numbers, saving_strategies#automate-then-forget |
 | `ml-minilm-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, saving_strategies#the-waiting-test, saving_strategies#pay-yourself-first |
 | `cohere-v4-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, saving_strategies#sinking-funds-for-lumpy-costs, saving_strategies#order-of-operations |
+| `cohere-v5-fast-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, saving_strategies#sinking-funds-for-lumpy-costs |
 | `cohere-v4-rerank` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#intro |
 
 ### q31 · saudi
@@ -56,6 +58,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 3 | financial_planning#know-your-four-numbers, saving_strategies#automate-then-forget, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries** |
 | `ml-minilm-direct` | ❌ 5 | financial_planning#know-your-four-numbers, emergency_fund#how-much-is-enough, saving_strategies#pay-yourself-first |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, saving_strategies#pay-yourself-first, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, saving_strategies#pay-yourself-first, financial_planning#know-your-four-numbers |
+| `cohere-v5-fast-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, saving_strategies#pay-yourself-first, financial_planning#know-your-four-numbers |
 | `cohere-v4-rerank` | ✅ 2 | financial_planning#know-your-four-numbers, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, budgeting#build-the-budget-from-your-actual-cash-flow |
 
 
@@ -81,6 +85,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ❌ 17 | emergency_fund#how-much-is-enough, emergency_fund#the-rule-that-protects-everything-else, saving_strategies#sinking-funds-for-lumpy-costs |
 | `ml-minilm-direct` | ❌ 7 | emergency_fund#how-much-is-enough, saving_strategies#the-waiting-test, financial_planning#know-your-four-numbers |
 | `cohere-v4-direct` | ❌ 7 | zakat#the-nisab-threshold, emergency_fund#how-much-is-enough, emergency_fund#the-rule-that-protects-everything-else |
+| `cohere-v5-pro-direct` | ✅ 2 | emergency_fund#how-much-is-enough, **budgeting#build-the-budget-from-your-actual-cash-flow**, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-fast-direct` | ✅ 2 | emergency_fund#how-much-is-enough, **budgeting#build-the-budget-from-your-actual-cash-flow**, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-rerank` | ❌ 13 | emergency_fund#how-much-is-enough, zakat#the-nisab-threshold, emergency_fund#the-rule-that-protects-everything-else |
 
 
@@ -105,6 +111,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 2 | islamic_finance#intro, **islamic_finance#the-three-prohibitions**, islamic_finance#practical-guidance |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#mudaraba-and-musharaka-partnership, islamic_finance#practical-guidance |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#intro, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#intro, islamic_finance#practical-guidance |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#intro, zakat#intro |
 
 ### q05 · msa
@@ -125,6 +133,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **emergency_fund#where-to-keep-it**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#rebuilding-after-you-use-it |
 | `ml-minilm-direct` | ❌ 4 | emergency_fund#intro, emergency_fund#how-much-is-enough, emergency_fund#rebuilding-after-you-use-it |
 | `cohere-v4-direct` | ✅ 1 | **emergency_fund#where-to-keep-it**, emergency_fund#intro, emergency_fund#rebuilding-after-you-use-it |
+| `cohere-v5-pro-direct` | ✅ 1 | **emergency_fund#where-to-keep-it**, emergency_fund#how-much-is-enough, emergency_fund#the-rule-that-protects-everything-else |
+| `cohere-v5-fast-direct` | ✅ 1 | **emergency_fund#where-to-keep-it**, emergency_fund#intro, emergency_fund#how-much-is-enough |
 | `cohere-v4-rerank` | ✅ 1 | **emergency_fund#where-to-keep-it**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#intro |
 
 ### q08 · msa
@@ -146,6 +156,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#mudaraba-and-musharaka-partnership, budgeting#categories-that-quietly-leak-money |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, emergency_fund#the-rule-that-protects-everything-else, financial_planning#a-financial-health-score |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, islamic_finance#mudaraba-and-musharaka-partnership |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, islamic_finance#murabaha-cost-plus-sale |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, saving_strategies#sinking-funds-for-lumpy-costs |
 
 ### q09 · msa
@@ -167,6 +179,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#vision-2030-context**, islamic_finance#murabaha-cost-plus-sale, budgeting#categories-that-quietly-leak-money |
 | `ml-minilm-direct` | ✅ 1 | **financial_planning#vision-2030-context**, car_financing#conventional-riba-based-auto-loans, zakat#the-calculation |
 | `cohere-v4-direct` | ✅ 2 | islamic_finance#murabaha-cost-plus-sale, **financial_planning#vision-2030-context**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries |
+| `cohere-v5-pro-direct` | ✅ 1 | **financial_planning#vision-2030-context**, car_financing#murabaha-the-standard-islamic-auto-finance, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-fast-direct` | ✅ 1 | **financial_planning#vision-2030-context**, islamic_finance#murabaha-cost-plus-sale, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-rerank` | ✅ 1 | **financial_planning#vision-2030-context**, zakat#how-a-large-purchase-affects-your-zakat-base, car_financing#murabaha-the-standard-islamic-auto-finance |
 
 ### q11 · msa
@@ -188,6 +202,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#practical-guidance |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#takaful-cooperative-insurance, islamic_finance#the-three-prohibitions |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#takaful-cooperative-insurance |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#takaful-cooperative-insurance, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#the-three-prohibitions, islamic_finance#takaful-cooperative-insurance |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#mudaraba-and-musharaka-partnership**, islamic_finance#the-three-prohibitions, islamic_finance#murabaha-cost-plus-sale |
 
 ### q14 · msa
@@ -208,6 +224,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, financial_planning#vision-2030-context |
 | `ml-minilm-direct` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, emergency_fund#intro |
 | `cohere-v4-direct` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, financial_planning#plan-around-goals-not-products |
+| `cohere-v5-fast-direct` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, financial_planning#plan-around-goals-not-products |
 | `cohere-v4-rerank` | ✅ 1 | **financial_planning#a-financial-health-score**, financial_planning#know-your-four-numbers, zakat#the-calculation |
 
 ### q15 · msa
@@ -229,6 +247,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#vision-2030-context**, financial_planning#know-your-four-numbers, emergency_fund#how-much-is-enough |
 | `ml-minilm-direct` | ❌ 4 | emergency_fund#how-much-is-enough, saving_strategies#automate-then-forget, saving_strategies#intro |
 | `cohere-v4-direct` | ✅ 1 | **financial_planning#vision-2030-context**, emergency_fund#intro, car_financing#the-decision-rule |
+| `cohere-v5-pro-direct` | ✅ 1 | **financial_planning#vision-2030-context**, emergency_fund#how-much-is-enough, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-fast-direct` | ✅ 1 | **financial_planning#vision-2030-context**, emergency_fund#how-much-is-enough, saving_strategies#pay-yourself-first |
 | `cohere-v4-rerank` | ✅ 1 | **financial_planning#vision-2030-context**, emergency_fund#how-much-is-enough, emergency_fund#intro |
 
 ### q16 · msa
@@ -250,6 +270,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, financial_planning#a-financial-health-score, saving_strategies#order-of-operations |
 | `ml-minilm-direct` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, financial_planning#a-financial-health-score, financial_planning#know-your-four-numbers |
 | `cohere-v4-direct` | ❌ 4 | financial_planning#know-your-four-numbers, financial_planning#a-financial-health-score, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, saving_strategies#order-of-operations, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-fast-direct` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, financial_planning#know-your-four-numbers, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `cohere-v4-rerank` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, emergency_fund#the-rule-that-protects-everything-else, saving_strategies#automate-then-forget |
 
 ### q18 · saudi
@@ -271,6 +293,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#ijara-leasing, emergency_fund#rebuilding-after-you-use-it |
 | `ml-minilm-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#ijara-leasing, saving_strategies#automate-then-forget |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, budgeting#build-the-budget-from-your-actual-cash-flow, islamic_finance#ijara-leasing |
+| `cohere-v5-pro-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#ijara-leasing, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#ijara-leasing, **saving_strategies#sinking-funds-for-lumpy-costs** |
 | `cohere-v4-rerank` | ✅ 2 | islamic_finance#ijara-leasing, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, emergency_fund#where-to-keep-it |
 
 ### q24 · saudi
@@ -292,6 +316,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **emergency_fund#rebuilding-after-you-use-it**, emergency_fund#intro, emergency_fund#the-rule-that-protects-everything-else |
 | `ml-minilm-direct` | ✅ 1 | **emergency_fund#rebuilding-after-you-use-it**, emergency_fund#the-rule-that-protects-everything-else, saving_strategies#the-waiting-test |
 | `cohere-v4-direct` | ✅ 2 | financial_planning#plan-around-goals-not-products, **emergency_fund#rebuilding-after-you-use-it**, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 3 | emergency_fund#the-rule-that-protects-everything-else, saving_strategies#sinking-funds-for-lumpy-costs, **emergency_fund#rebuilding-after-you-use-it** |
+| `cohere-v5-fast-direct` | ✅ 1 | **emergency_fund#rebuilding-after-you-use-it**, emergency_fund#how-much-is-enough, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-rerank` | ❌ 9 | budgeting#build-the-budget-from-your-actual-cash-flow, saving_strategies#the-waiting-test, saving_strategies#order-of-operations |
 
 ### q25 · saudi
@@ -313,6 +339,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 2 | saving_strategies#automate-then-forget, **saving_strategies#pay-yourself-first**, financial_planning#know-your-four-numbers |
 | `ml-minilm-direct` | ✅ 1 | **saving_strategies#pay-yourself-first**, saving_strategies#automate-then-forget, zakat#intro |
 | `cohere-v4-direct` | ❌ 14 | financial_planning#plan-around-goals-not-products, emergency_fund#rebuilding-after-you-use-it, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **saving_strategies#pay-yourself-first**, saving_strategies#sinking-funds-for-lumpy-costs, saving_strategies#automate-then-forget |
+| `cohere-v5-fast-direct` | ❌ 4 | zakat#how-a-large-purchase-affects-your-zakat-base, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, zakat#the-calculation |
 | `cohere-v4-rerank` | ✅ 1 | **saving_strategies#pay-yourself-first**, zakat#how-a-large-purchase-affects-your-zakat-base, budgeting#review-cadence |
 
 ### q27 · saudi
@@ -334,6 +362,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#the-calculation**, zakat#the-nisab-threshold, zakat#what-you-pay-zakat-on |
 | `ml-minilm-direct` | ✅ 1 | **zakat#the-calculation**, zakat#the-nisab-threshold, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-direct` | ✅ 1 | **zakat#the-calculation**, zakat#the-nisab-threshold, zakat#what-you-pay-zakat-on |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#the-calculation**, zakat#the-nisab-threshold, zakat#intro |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#the-calculation**, zakat#what-you-pay-zakat-on, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#the-calculation**, zakat#how-a-large-purchase-affects-your-zakat-base, zakat#intro |
 
 ### q28 · saudi
@@ -354,6 +384,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **emergency_fund#how-much-is-enough**, saving_strategies#the-waiting-test, emergency_fund#where-to-keep-it |
 | `ml-minilm-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, saving_strategies#the-waiting-test, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries |
 | `cohere-v4-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, saving_strategies#the-waiting-test, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries |
+| `cohere-v5-pro-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-fast-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, saving_strategies#sinking-funds-for-lumpy-costs |
 | `cohere-v4-rerank` | ✅ 1 | **emergency_fund#how-much-is-enough**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, saving_strategies#the-waiting-test |
 
 ### q30 · saudi
@@ -375,6 +407,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, financial_planning#know-your-four-numbers, emergency_fund#how-much-is-enough |
 | `ml-minilm-direct` | ✅ 2 | saving_strategies#automate-then-forget, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, saving_strategies#pay-yourself-first |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, financial_planning#know-your-four-numbers, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, **budgeting#intro**, emergency_fund#how-much-is-enough |
+| `cohere-v5-fast-direct` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, **budgeting#intro**, emergency_fund#how-much-is-enough |
 | `cohere-v4-rerank` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, saving_strategies#sinking-funds-for-lumpy-costs, emergency_fund#how-much-is-enough |
 
 ### q32 · saudi
@@ -396,6 +430,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#ijara-leasing, car_financing#paying-cash |
 | `ml-minilm-direct` | ✅ 3 | islamic_finance#ijara-leasing, car_financing#conventional-riba-based-auto-loans, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries** |
 | `cohere-v4-direct` | ❌ 5 | islamic_finance#ijara-leasing, budgeting#build-the-budget-from-your-actual-cash-flow, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-pro-direct` | ✅ 2 | car_financing#the-decision-rule, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-fast-direct` | ✅ 2 | islamic_finance#ijara-leasing, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, islamic_finance#practical-guidance |
 | `cohere-v4-rerank` | ✅ 2 | islamic_finance#ijara-leasing, **budgeting#the-50-30-20-rule-adapted-for-saudi-salaries**, zakat#what-you-pay-zakat-on |
 
 ### q33 · saudi
@@ -417,6 +453,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 3 | financial_planning#intro, islamic_finance#murabaha-cost-plus-sale, **car_financing#murabaha-the-standard-islamic-auto-finance** |
 | `ml-minilm-direct` | ❌ 27 | financial_planning#know-your-four-numbers, saving_strategies#pay-yourself-first, financial_planning#a-financial-health-score |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
 | `cohere-v4-rerank` | ✅ 2 | islamic_finance#murabaha-cost-plus-sale, **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans |
 
 ### q34 · saudi
@@ -438,6 +476,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#intro, islamic_finance#murabaha-cost-plus-sale |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#intro |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#the-three-prohibitions |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#the-three-prohibitions, islamic_finance#takaful-cooperative-insurance |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#the-three-prohibitions, islamic_finance#intro |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#practical-guidance**, islamic_finance#ijara-leasing, car_financing#conventional-riba-based-auto-loans |
 
 ### q35 · saudi
@@ -459,6 +499,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, car_financing#the-decision-rule |
 | `ml-minilm-direct` | ❌ 7 | car_financing#conventional-riba-based-auto-loans, car_financing#the-decision-rule, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-direct` | ❌ 4 | islamic_finance#ijara-leasing, islamic_finance#the-three-prohibitions, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, islamic_finance#the-three-prohibitions, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#takaful-cooperative-insurance**, car_financing#murabaha-the-standard-islamic-auto-finance, islamic_finance#ijara-leasing |
 | `cohere-v4-rerank` | ✅ 3 | zakat#what-you-pay-zakat-on, zakat#how-a-large-purchase-affects-your-zakat-base, **islamic_finance#takaful-cooperative-insurance** |
 
 ### q37 · terminology
@@ -479,6 +521,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#the-three-prohibitions, islamic_finance#practical-guidance |
 | `ml-minilm-direct` | ❌ 6 | islamic_finance#the-three-prohibitions, financial_planning#vision-2030-context, car_financing#paying-cash |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#ijara-leasing, islamic_finance#the-three-prohibitions |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#the-three-prohibitions, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 2 | islamic_finance#the-three-prohibitions, **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#practical-guidance |
 | `cohere-v4-rerank` | ❌ 9 | zakat#how-a-large-purchase-affects-your-zakat-base, zakat#what-you-pay-zakat-on, zakat#intro |
 
 ### q38 · terminology
@@ -500,6 +544,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 3 | islamic_finance#takaful-cooperative-insurance, islamic_finance#mudaraba-and-musharaka-partnership, **islamic_finance#murabaha-cost-plus-sale** |
 | `ml-minilm-direct` | ✅ 2 | islamic_finance#ijara-leasing, **islamic_finance#murabaha-cost-plus-sale**, zakat#intro |
 | `cohere-v4-direct` | ❌ 5 | islamic_finance#ijara-leasing, islamic_finance#the-three-prohibitions, islamic_finance#mudaraba-and-musharaka-partnership |
+| `cohere-v5-pro-direct` | ✅ 2 | islamic_finance#takaful-cooperative-insurance, **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#ijara-leasing |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#murabaha-cost-plus-sale**, islamic_finance#takaful-cooperative-insurance, islamic_finance#mudaraba-and-musharaka-partnership |
 | `cohere-v4-rerank` | ❌ 4 | zakat#intro, islamic_finance#mudaraba-and-musharaka-partnership, emergency_fund#intro |
 
 ### q42 · terminology
@@ -521,6 +567,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#the-calculation, **zakat#intro** |
 | `ml-minilm-direct` | ❌ 31 | financial_planning#vision-2030-context, car_financing#paying-cash, emergency_fund#where-to-keep-it |
 | `cohere-v4-direct` | ✅ 2 | zakat#how-a-large-purchase-affects-your-zakat-base, **zakat#the-nisab-threshold**, **zakat#intro** |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#the-nisab-threshold**, **zakat#intro**, zakat#the-calculation |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#the-nisab-threshold**, **zakat#intro**, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#how-a-large-purchase-affects-your-zakat-base, **zakat#intro** |
 
 ### q43 · terminology
@@ -541,6 +589,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 3 | islamic_finance#mudaraba-and-musharaka-partnership, islamic_finance#takaful-cooperative-insurance, **islamic_finance#the-three-prohibitions** |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, emergency_fund#the-rule-that-protects-everything-else, financial_planning#vision-2030-context |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#mudaraba-and-musharaka-partnership, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#takaful-cooperative-insurance, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#mudaraba-and-musharaka-partnership |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#mudaraba-and-musharaka-partnership, islamic_finance#murabaha-cost-plus-sale |
 
 ### q46 · terminology
@@ -562,6 +612,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#ijara-leasing**, islamic_finance#mudaraba-and-musharaka-partnership, islamic_finance#murabaha-cost-plus-sale |
 | `ml-minilm-direct` | ❌ 4 | car_financing#conventional-riba-based-auto-loans, car_financing#murabaha-the-standard-islamic-auto-finance, emergency_fund#where-to-keep-it |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#ijara-leasing**, islamic_finance#murabaha-cost-plus-sale, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#ijara-leasing**, islamic_finance#murabaha-cost-plus-sale, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#ijara-leasing**, islamic_finance#murabaha-cost-plus-sale, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-rerank` | ✅ 1 | **islamic_finance#ijara-leasing**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#mudaraba-and-musharaka-partnership |
 
 ### q51 · ambiguous
@@ -582,6 +634,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#plan-around-goals-not-products**, saving_strategies#automate-then-forget, **saving_strategies#order-of-operations** |
 | `ml-minilm-direct` | ✅ 1 | **financial_planning#know-your-four-numbers**, financial_planning#a-financial-health-score, **financial_planning#plan-around-goals-not-products** |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#build-the-budget-from-your-actual-cash-flow**, **financial_planning#know-your-four-numbers**, **saving_strategies#order-of-operations** |
+| `cohere-v5-pro-direct` | ✅ 1 | **saving_strategies#order-of-operations**, **financial_planning#plan-around-goals-not-products**, **budgeting#build-the-budget-from-your-actual-cash-flow** |
+| `cohere-v5-fast-direct` | ✅ 1 | **saving_strategies#order-of-operations**, **financial_planning#plan-around-goals-not-products**, **budgeting#build-the-budget-from-your-actual-cash-flow** |
 | `cohere-v4-rerank` | ✅ 1 | **budgeting#build-the-budget-from-your-actual-cash-flow**, saving_strategies#pay-yourself-first, **saving_strategies#order-of-operations** |
 
 
@@ -610,6 +664,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ❌ 5 | emergency_fund#intro, emergency_fund#rebuilding-after-you-use-it, emergency_fund#the-rule-that-protects-everything-else |
 | `ml-minilm-direct` | ✅ 2 | emergency_fund#intro, **emergency_fund#how-much-is-enough**, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#where-to-keep-it, emergency_fund#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#intro |
+| `cohere-v5-fast-direct` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#where-to-keep-it, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-rerank` | ✅ 1 | **emergency_fund#how-much-is-enough**, emergency_fund#the-rule-that-protects-everything-else, emergency_fund#where-to-keep-it |
 
 ### q26 · saudi
@@ -631,6 +687,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ❌ 5 | financial_planning#plan-around-goals-not-products, saving_strategies#the-waiting-test, emergency_fund#the-rule-that-protects-everything-else |
 | `ml-minilm-direct` | ❌ 8 | car_financing#paying-cash, emergency_fund#the-rule-that-protects-everything-else, saving_strategies#pay-yourself-first |
 | `cohere-v4-direct` | ✅ 1 | **saving_strategies#order-of-operations**, budgeting#build-the-budget-from-your-actual-cash-flow, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-pro-direct` | ✅ 1 | **saving_strategies#order-of-operations**, car_financing#paying-cash, car_financing#the-decision-rule |
+| `cohere-v5-fast-direct` | ✅ 1 | **saving_strategies#order-of-operations**, car_financing#the-decision-rule, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `cohere-v4-rerank` | ✅ 1 | **saving_strategies#order-of-operations**, budgeting#build-the-budget-from-your-actual-cash-flow, islamic_finance#murabaha-cost-plus-sale |
 
 
@@ -655,6 +713,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **saving_strategies#sinking-funds-for-lumpy-costs**, saving_strategies#order-of-operations, saving_strategies#automate-then-forget |
 | `ml-minilm-direct` | ❌ 7 | saving_strategies#automate-then-forget, budgeting#intro, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `cohere-v4-direct` | ❌ 5 | budgeting#build-the-budget-from-your-actual-cash-flow, saving_strategies#automate-then-forget, saving_strategies#order-of-operations |
+| `cohere-v5-pro-direct` | ✅ 1 | **saving_strategies#sinking-funds-for-lumpy-costs**, saving_strategies#automate-then-forget, saving_strategies#order-of-operations |
+| `cohere-v5-fast-direct` | ✅ 1 | **saving_strategies#sinking-funds-for-lumpy-costs**, saving_strategies#automate-then-forget, saving_strategies#pay-yourself-first |
 | `cohere-v4-rerank` | ✅ 1 | **saving_strategies#sinking-funds-for-lumpy-costs**, zakat#the-calculation, zakat#what-you-pay-zakat-on |
 
 
@@ -688,6 +748,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ❌ 4 | zakat#intro, zakat#what-you-pay-zakat-on, zakat#the-calculation |
 | `ml-minilm-direct` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#the-calculation, zakat#intro |
 | `cohere-v4-direct` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#what-you-pay-zakat-on, zakat#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#the-calculation, zakat#what-you-pay-zakat-on |
+| `cohere-v5-fast-direct` | ✅ 2 | zakat#the-calculation, **zakat#the-nisab-threshold**, zakat#what-you-pay-zakat-on |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#the-nisab-threshold**, zakat#the-calculation, zakat#intro |
 
 ### q03 · msa
@@ -708,6 +770,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#paying-cash**, car_financing#the-decision-rule, car_financing#intro |
 | `ml-minilm-direct` | ✅ 1 | **car_financing#paying-cash**, car_financing#conventional-riba-based-auto-loans, car_financing#the-decision-rule |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#paying-cash**, car_financing#the-decision-rule, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#paying-cash**, car_financing#the-decision-rule, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#paying-cash**, car_financing#the-decision-rule, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#paying-cash**, car_financing#the-decision-rule, saving_strategies#the-waiting-test |
 
 ### q06 · msa
@@ -729,6 +793,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, **zakat#what-you-pay-zakat-on**, zakat#intro |
 | `ml-minilm-direct` | ❌ 6 | car_financing#intro, car_financing#conventional-riba-based-auto-loans, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#the-calculation |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#the-calculation |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#intro |
 
 ### q07 · msa
@@ -749,6 +815,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#the-calculation**, zakat#intro, zakat#what-you-pay-zakat-on |
 | `ml-minilm-direct` | ✅ 1 | **zakat#the-calculation**, financial_planning#know-your-four-numbers, emergency_fund#how-much-is-enough |
 | `cohere-v4-direct` | ✅ 1 | **zakat#the-calculation**, zakat#what-you-pay-zakat-on, zakat#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#the-calculation**, zakat#what-you-pay-zakat-on, zakat#how-a-large-purchase-affects-your-zakat-base |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#the-calculation**, zakat#what-you-pay-zakat-on, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#the-calculation**, zakat#intro, zakat#what-you-pay-zakat-on |
 
 ### q10 · msa
@@ -769,6 +837,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **financial_planning#know-your-four-numbers**, zakat#what-you-pay-zakat-on, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `ml-minilm-direct` | ✅ 3 | car_financing#conventional-riba-based-auto-loans, financial_planning#vision-2030-context, **financial_planning#know-your-four-numbers** |
 | `cohere-v4-direct` | ✅ 2 | budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, **financial_planning#know-your-four-numbers**, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **financial_planning#know-your-four-numbers**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, financial_planning#a-financial-health-score |
+| `cohere-v5-fast-direct` | ✅ 1 | **financial_planning#know-your-four-numbers**, financial_planning#a-financial-health-score, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `cohere-v4-rerank` | ✅ 1 | **financial_planning#know-your-four-numbers**, zakat#the-calculation, budgeting#build-the-budget-from-your-actual-cash-flow |
 
 ### q12 · msa
@@ -790,6 +860,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, car_financing#paying-cash |
 | `ml-minilm-direct` | ❌ 5 | car_financing#paying-cash, car_financing#conventional-riba-based-auto-loans, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, car_financing#paying-cash |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, car_financing#the-decision-rule |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#ijara-leasing, car_financing#paying-cash |
 
 ### q13 · msa
@@ -810,6 +882,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **budgeting#review-cadence**, budgeting#intro, emergency_fund#rebuilding-after-you-use-it |
 | `ml-minilm-direct` | ✅ 1 | **budgeting#review-cadence**, emergency_fund#rebuilding-after-you-use-it, financial_planning#know-your-four-numbers |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#review-cadence**, emergency_fund#rebuilding-after-you-use-it, budgeting#build-the-budget-from-your-actual-cash-flow |
+| `cohere-v5-pro-direct` | ✅ 1 | **budgeting#review-cadence**, budgeting#build-the-budget-from-your-actual-cash-flow, emergency_fund#rebuilding-after-you-use-it |
+| `cohere-v5-fast-direct` | ✅ 1 | **budgeting#review-cadence**, emergency_fund#rebuilding-after-you-use-it, budgeting#build-the-budget-from-your-actual-cash-flow |
 | `cohere-v4-rerank` | ✅ 1 | **budgeting#review-cadence**, emergency_fund#rebuilding-after-you-use-it, budgeting#categories-that-quietly-leak-money |
 
 ### q19 · saudi
@@ -830,6 +904,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#paying-cash**, **car_financing#the-decision-rule**, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `ml-minilm-direct` | ✅ 1 | **car_financing#paying-cash**, car_financing#intro, **car_financing#the-decision-rule** |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#paying-cash**, **car_financing#the-decision-rule**, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#paying-cash**, **car_financing#the-decision-rule**, car_financing#murabaha-the-standard-islamic-auto-finance |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#paying-cash**, **car_financing#the-decision-rule**, car_financing#murabaha-the-standard-islamic-auto-finance |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#paying-cash**, **car_financing#the-decision-rule**, car_financing#murabaha-the-standard-islamic-auto-finance |
 
 ### q20 · saudi
@@ -850,6 +926,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **budgeting#categories-that-quietly-leak-money**, financial_planning#know-your-four-numbers, budgeting#review-cadence |
 | `ml-minilm-direct` | ❌ 5 | emergency_fund#the-rule-that-protects-everything-else, financial_planning#vision-2030-context, financial_planning#know-your-four-numbers |
 | `cohere-v4-direct` | ✅ 1 | **budgeting#categories-that-quietly-leak-money**, budgeting#build-the-budget-from-your-actual-cash-flow, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries |
+| `cohere-v5-pro-direct` | ✅ 1 | **budgeting#categories-that-quietly-leak-money**, budgeting#review-cadence, saving_strategies#sinking-funds-for-lumpy-costs |
+| `cohere-v5-fast-direct` | ✅ 1 | **budgeting#categories-that-quietly-leak-money**, saving_strategies#sinking-funds-for-lumpy-costs, budgeting#intro |
 | `cohere-v4-rerank` | ✅ 1 | **budgeting#categories-that-quietly-leak-money**, islamic_finance#practical-guidance, islamic_finance#murabaha-cost-plus-sale |
 
 ### q22 · saudi
@@ -871,6 +949,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **saving_strategies#automate-then-forget**, saving_strategies#pay-yourself-first, financial_planning#know-your-four-numbers |
 | `ml-minilm-direct` | ✅ 3 | financial_planning#vision-2030-context, financial_planning#a-financial-health-score, **saving_strategies#automate-then-forget** |
 | `cohere-v4-direct` | ✅ 1 | **saving_strategies#automate-then-forget**, zakat#how-a-large-purchase-affects-your-zakat-base, financial_planning#plan-around-goals-not-products |
+| `cohere-v5-pro-direct` | ✅ 1 | **saving_strategies#automate-then-forget**, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries, saving_strategies#pay-yourself-first |
+| `cohere-v5-fast-direct` | ✅ 1 | **saving_strategies#automate-then-forget**, saving_strategies#pay-yourself-first, budgeting#the-50-30-20-rule-adapted-for-saudi-salaries |
 | `cohere-v4-rerank` | ✅ 1 | **saving_strategies#automate-then-forget**, saving_strategies#pay-yourself-first, saving_strategies#order-of-operations |
 
 ### q39 · terminology
@@ -891,6 +971,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 2 | islamic_finance#murabaha-cost-plus-sale, **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans |
 | `ml-minilm-direct` | ❌ 7 | car_financing#conventional-riba-based-auto-loans, zakat#how-a-large-purchase-affects-your-zakat-base, car_financing#the-decision-rule |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, car_financing#the-decision-rule |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, car_financing#conventional-riba-based-auto-loans |
 
 ### q40 · terminology
@@ -911,6 +993,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, islamic_finance#practical-guidance |
 | `ml-minilm-direct` | ❌ 26 | emergency_fund#the-rule-that-protects-everything-else, financial_planning#plan-around-goals-not-products, financial_planning#know-your-four-numbers |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, islamic_finance#murabaha-cost-plus-sale |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, car_financing#conventional-riba-based-auto-loans, zakat#how-a-large-purchase-affects-your-zakat-base |
 
 ### q41 · terminology
@@ -931,6 +1015,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#conventional-riba-based-auto-loans**, **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale |
 | `ml-minilm-direct` | ✅ 1 | **car_financing#conventional-riba-based-auto-loans**, financial_planning#vision-2030-context, car_financing#intro |
 | `cohere-v4-direct` | ✅ 1 | **car_financing#conventional-riba-based-auto-loans**, **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, **car_financing#conventional-riba-based-auto-loans** |
+| `cohere-v5-fast-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, islamic_finance#murabaha-cost-plus-sale, **car_financing#conventional-riba-based-auto-loans** |
 | `cohere-v4-rerank` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, **car_financing#conventional-riba-based-auto-loans**, islamic_finance#murabaha-cost-plus-sale |
 
 ### q44 · terminology
@@ -951,6 +1037,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#the-calculation, zakat#intro |
 | `ml-minilm-direct` | ❌ 6 | financial_planning#vision-2030-context, emergency_fund#the-rule-that-protects-everything-else, financial_planning#plan-around-goals-not-products |
 | `cohere-v4-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#the-calculation, zakat#intro |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#the-calculation, zakat#how-a-large-purchase-affects-your-zakat-base |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#the-calculation, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#the-calculation, zakat#intro |
 
 ### q45 · terminology
@@ -971,6 +1059,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#what-you-pay-zakat-on**, zakat#how-a-large-purchase-affects-your-zakat-base, **zakat#the-calculation** |
 | `ml-minilm-direct` | ❌ 11 | car_financing#conventional-riba-based-auto-loans, car_financing#paying-cash, financial_planning#vision-2030-context |
 | `cohere-v4-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#the-calculation**, zakat#the-nisab-threshold |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#the-calculation**, zakat#how-a-large-purchase-affects-your-zakat-base |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#the-calculation**, zakat#how-a-large-purchase-affects-your-zakat-base |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#what-you-pay-zakat-on**, **zakat#the-calculation**, zakat#how-a-large-purchase-affects-your-zakat-base |
 
 ### q47 · terminology
@@ -991,6 +1081,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#intro |
 | `ml-minilm-direct` | ❌ 7 | car_financing#paying-cash, car_financing#the-decision-rule, car_financing#intro |
 | `cohere-v4-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
 
 ### q48 · terminology
@@ -1011,6 +1103,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#intro, zakat#what-you-pay-zakat-on |
 | `ml-minilm-direct` | ✅ 3 | car_financing#paying-cash, car_financing#the-decision-rule, **zakat#how-a-large-purchase-affects-your-zakat-base** |
 | `cohere-v4-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
+| `cohere-v5-pro-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
+| `cohere-v5-fast-direct` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#the-calculation |
 | `cohere-v4-rerank` | ✅ 1 | **zakat#how-a-large-purchase-affects-your-zakat-base**, zakat#what-you-pay-zakat-on, zakat#intro |
 
 ### q50 · ambiguous
@@ -1032,6 +1126,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 2 | car_financing#the-decision-rule, **islamic_finance#murabaha-cost-plus-sale**, car_financing#intro |
 | `ml-minilm-direct` | ❌ 5 | car_financing#the-decision-rule, car_financing#paying-cash, emergency_fund#the-rule-that-protects-everything-else |
 | `cohere-v4-direct` | ✅ 2 | car_financing#the-decision-rule, **islamic_finance#practical-guidance**, **car_financing#conventional-riba-based-auto-loans** |
+| `cohere-v5-pro-direct` | ✅ 1 | **car_financing#murabaha-the-standard-islamic-auto-finance**, **car_financing#conventional-riba-based-auto-loans**, **islamic_finance#murabaha-cost-plus-sale** |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#murabaha-cost-plus-sale**, **car_financing#conventional-riba-based-auto-loans**, **car_financing#murabaha-the-standard-islamic-auto-finance** |
 | `cohere-v4-rerank` | ✅ 2 | car_financing#the-decision-rule, **car_financing#conventional-riba-based-auto-loans**, car_financing#paying-cash |
 
 ### q53 · ambiguous
@@ -1052,6 +1148,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#ijara-leasing, islamic_finance#practical-guidance |
 | `ml-minilm-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, car_financing#paying-cash, islamic_finance#ijara-leasing |
 | `cohere-v4-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#ijara-leasing, islamic_finance#murabaha-cost-plus-sale |
+| `cohere-v5-pro-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, **car_financing#conventional-riba-based-auto-loans**, islamic_finance#practical-guidance |
+| `cohere-v5-fast-direct` | ✅ 1 | **islamic_finance#the-three-prohibitions**, islamic_finance#practical-guidance, **car_financing#conventional-riba-based-auto-loans** |
 | `cohere-v4-rerank` | ✅ 2 | islamic_finance#ijara-leasing, **islamic_finance#the-three-prohibitions**, islamic_finance#practical-guidance |
 
 ### q54 · ambiguous
@@ -1072,6 +1170,8 @@ Every question where at least one configuration gets a relevant chunk into the t
 | `minilm-gold-en` | ✅ 1 | **car_financing#intro**, financial_planning#plan-around-goals-not-products, **car_financing#paying-cash** |
 | `ml-minilm-direct` | ✅ 1 | **car_financing#intro**, car_financing#murabaha-the-standard-islamic-auto-finance, **car_financing#paying-cash** |
 | `cohere-v4-direct` | ✅ 2 | car_financing#murabaha-the-standard-islamic-auto-finance, **car_financing#the-decision-rule**, **car_financing#intro** |
+| `cohere-v5-pro-direct` | ✅ 2 | car_financing#murabaha-the-standard-islamic-auto-finance, **car_financing#paying-cash**, **car_financing#intro** |
+| `cohere-v5-fast-direct` | ✅ 2 | car_financing#murabaha-the-standard-islamic-auto-finance, **car_financing#intro**, **car_financing#paying-cash** |
 | `cohere-v4-rerank` | ❌ 5 | car_financing#murabaha-the-standard-islamic-auto-finance, saving_strategies#the-waiting-test, zakat#how-a-large-purchase-affects-your-zakat-base |
 
 

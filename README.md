@@ -33,6 +33,8 @@ Rows are grouped by *what text gets searched*. The embedder is MiniLM unless sta
 | full question, LLM translation | `minilm-llm-translation` | 71% | 95% | 0.82 (0.74–0.89) |
 | full question, human translation | `minilm-gold-en` — ceiling | 77% | 93% | 0.85 (0.77–0.92) |
 | full question, raw Arabic | `cohere-v4-direct` — Cohere embed-v4.0 | 77% | 88% | 0.84 (0.77–0.92) |
+| full question, raw Arabic | **`cohere-v5-pro-direct` — Cohere embed-v5.0-pro** | 89% | 100% | **0.94** (0.90–0.98) |
+| full question, raw Arabic | **`cohere-v5-fast-direct` — Cohere embed-v5.0-fast** | 88% | 98% | **0.93** (0.88–0.97) |
 | full question, raw Arabic | `ml-minilm-direct` — free multilingual MiniLM | 45% | 64% | 0.58 (0.48–0.69) |
 | full question, raw Arabic | `cohere-v4-rerank` — + rerank-v4.0-fast | 79% | 91% | 0.86 (0.78–0.93) |
 
@@ -48,15 +50,25 @@ Rows are grouped by *what text gets searched*. The embedder is MiniLM unless sta
    - The model treats "3-8 keywords" as a short phrase that keeps the intent: `"debt repayment vs
      saving"`, `"is car insurance halal"`.
 3. **The embedding model is not the bottleneck when the query text is good English.** MiniLM on a
-   human translation (0.85) ties Cohere on raw Arabic (0.84). Cohere on raw Arabic also ties the
-   LLM-topic route (+0.03, CI −0.08 to +0.15).
-4. **There are fixes at both layers, and they reach the same level.**
+   human translation (0.85) ties Cohere embed-v4.0 on raw Arabic (0.84). Embed-v4.0 on raw Arabic
+   also ties the LLM-topic route (+0.03, CI −0.08 to +0.15). Embed 5 goes further; see finding 6.
+4. **There are fixes at both layers.** With MiniLM and embed-v4.0 they reach the same level:
    - *Query-rewriting layer:* have an LLM produce an English label or translation. It doesn't
      matter much which.
    - *Embedding layer:* use a multilingual embedder that searches the Arabic directly. That also
      removes the keyword router's silent fallback, because the fallback query (the raw Arabic)
      becomes searchable.
 5. **Rerank adds nothing measurable** (+0.01, CI −0.06 to +0.09).
+6. **Cohere Embed 5 is the best setup tested.** Searching the raw Arabic directly, at the same 1024
+   dimensions as v4:
+   - `embed-v5.0-pro` scores 0.94 MRR and puts a correct section in the top 3 for **all 56
+     questions**. `embed-v5.0-fast` scores 0.93, and the difference between them is negligible
+     (+0.01, CI −0.03 to +0.06).
+   - Both beat embed-v4.0: +0.10 for Pro (CI +0.03 to +0.17) and +0.09 for Fast (CI +0.01 to
+     +0.16). They fix all 7 questions v4 missed in the top 3.
+   - Pro also beats every query-rewriting route, including MiniLM on a human translation (+0.09,
+     CI +0.01 to +0.18), so with Embed 5 the embedding layer is no longer tied with the rewriting
+     layer.
 
 The LLM rows use Cohere `command-a-03-2025`. Finding 2 depends on the model writing phrase-like
 labels, so it may not hold for other LLMs; see [Limitations](#limitations).
@@ -109,6 +121,8 @@ This gives 38 chunks of 31–313 words.
 | `minilm-gold-en` | human translation | all-MiniLM-L6-v2 |
 | `ml-minilm-direct` | raw Arabic | paraphrase-multilingual-MiniLM-L12-v2 |
 | `cohere-v4-direct` | raw Arabic | Cohere `embed-v4.0`, 1024 dims |
+| `cohere-v5-pro-direct` | raw Arabic | Cohere `embed-v5.0-pro`, 1024 dims |
+| `cohere-v5-fast-direct` | raw Arabic | Cohere `embed-v5.0-fast`, 1024 dims |
 | `cohere-v4-rerank` | raw Arabic | `embed-v4.0` top-20 → `rerank-v4.0-fast` |
 
 **The keyword router** (`bench/router.py`) is a 27-entry Arabic → English dictionary with
@@ -144,7 +158,7 @@ difference between the two rows comes only from *what* the LLM was asked to writ
 
 ## Results
 
-![Recall per config grouped by what text is searched, and Recall@3 split by whether the keyword router matched](results/chart.png)
+![Recall@1, @3 and @5 per config, grouped by what text is searched](results/chart.png)
 
 | Config | Searched text | R@1 | R@3 | R@5 | MRR | 95% CI |
 |---|---|---|---|---|---|---|
@@ -155,6 +169,8 @@ difference between the two rows comes only from *what* the LLM was asked to writ
 | `minilm-gold-en` | human translation | 77% | 93% | 98% | 0.85 | 0.77–0.92 |
 | `ml-minilm-direct` | raw Arabic | 45% | 64% | 77% | 0.58 | 0.48–0.69 |
 | `cohere-v4-direct` | raw Arabic | 77% | 88% | 96% | 0.84 | 0.77–0.92 |
+| `cohere-v5-pro-direct` | raw Arabic | 89% | 100% | 100% | 0.94 | 0.90–0.98 |
+| `cohere-v5-fast-direct` | raw Arabic | 88% | 98% | 100% | 0.93 | 0.88–0.97 |
 | `cohere-v4-rerank` | raw Arabic | 79% | 91% | 95% | 0.86 | 0.78–0.93 |
 | *random ranking (expected)* | | 4% | 11% | 18% | 0.14 | |
 
@@ -169,20 +185,24 @@ difference between the two rows comes only from *what* the LLM was asked to writ
 | `minilm-gold-en` | 91% | 96% |
 | `ml-minilm-direct` | 50% | 83% |
 | `cohere-v4-direct` | 94% | 79% |
+| `cohere-v5-pro-direct` | 100% | 100% |
+| `cohere-v5-fast-direct` | 100% | 96% |
 | `cohere-v4-rerank` | 94% | 88% |
 
 ## Implications
 
-- **With an LLM rewriting the query, an English-only embedder is near the ceiling on this set.**
-  Switching the topic label to a translation, or MiniLM to Cohere, gives no measurable gain here.
+- **With an LLM rewriting the query, an English-only embedder reaches about the level of Cohere
+  embed-v4.0.** Switching the topic label to a translation, or MiniLM to embed-v4.0, gives no
+  measurable gain here. Switching to Cohere Embed 5 does: it beats every rewriting route and needs
+  no LLM call.
 - **A keyword router is the weak point.** Used as the only route or as a fallback, it drops Arabic
   retrieval from about 0.81 to 0.41 MRR. On questions the map can't parse, it drops to the floor,
   and nothing surfaces this. There are fixes at both layers:
   - *Rewriting layer:* normalize hamza, ta marbuta and common suffixes before the substring match.
     That would recover some misses (e.g. زكاتي, الطوارى, اسلامي), but the labels would stay generic.
   - *Embedding layer:* a multilingual embedder makes the fallback query, the raw Arabic, itself
-    searchable. Cohere `embed-v4.0` scores 0.84 on raw Arabic here. It would also make query
-    rewriting unnecessary. The local multilingual MiniLM (0.58) is a partial fix that needs no network.
+    searchable. Cohere `embed-v4.0` scores 0.84 on raw Arabic here, and `embed-v5.0-pro` 0.94.
+    It would also make query rewriting unnecessary. The local multilingual MiniLM (0.58) is a partial fix that needs no network.
 - **Asking for a translation instead of a topic label** costs nothing extra in the same call. It's
   worth considering for multi-part or quantity questions (q26, q17, q31), but this benchmark doesn't
   show a net gain.
@@ -200,8 +220,8 @@ difference between the two rows comes only from *what* the LLM was asked to writ
 - **Single-turn only.** Every question was sent with an empty conversation history, so follow-up
   questions that depend on context aren't tested.
 - **Small and single-domain.** 56 questions over 38 chunks from 7 documents. MRR CIs are about
-  ±0.08–0.10, which separates the keyword router from everything else but can't rank the top
-  configurations against each other.
+  ±0.04–0.10, which separates the keyword router from everything else but can't separate most of
+  the top configurations from each other. Embed 5 vs embed-v4.0 is the exception.
 - **The eval set is a stress test, not a traffic sample.** It deliberately includes vocabulary
   missing from the keyword map. The 24/56 fallback rate describes this set, not real-world traffic.
 - **Gold translations are hand-written and clean**, so the human-translation row is an optimistic
@@ -226,7 +246,7 @@ python run_eval.py --configs minilm-direct,minilm-router,minilm-gold-en,ml-minil
 
 - **Caching.** Embeddings, rerank results, LLM responses and API latency samples are cached under
   `cache/` (gitignored). LLM responses are keyed by model, prompt hash and question.
-- **Call budget for a fresh run.** It needs 190 Cohere calls: 78 embed/rerank plus 112 chat.
+- **Call budget for a fresh run.** It needs 234 Cohere calls: 122 embed/rerank plus 112 chat.
   Trial keys allow 1,000 calls per month across all endpoints. After that, re-runs are free.
 - **Rate limits.** 429 and 5xx responses are retried with exponential backoff. Calls are spaced to
   trial limits: rerank 10/min, chat 20/min.
@@ -259,7 +279,7 @@ bench/router.py        keyword router + fallback instrumentation
 bench/llm_router.py    LLM router: topic_en call and its translation variant (command-a-03-2025)
 bench/embedders.py     Embedder interface, MiniLM / Cohere backends, disk cache, retry/backoff
 bench/rerank.py        Cohere Rerank with throttle + cache
-bench/configs.py       the eight configurations
+bench/configs.py       the ten configurations
 bench/metrics.py       Recall@k, MRR, bootstrap CIs, random baseline
 bench/report.py        results.md, chart.png, disagreements.md, per_query.jsonl
 eval/questions_ar.json

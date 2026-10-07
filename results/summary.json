@@ -6,7 +6,7 @@
     "MRR": 0.1677200125122114,
     "n": 56,
     "latency": {
-      "median_ms": 11.583350016735494,
+      "median_ms": 44.03975000604987,
       "n": 56,
       "where": "local CPU"
     },
@@ -19,7 +19,7 @@
     "MRR": 0.4140277208321024,
     "n": 56,
     "latency": {
-      "median_ms": 14.080349821597338,
+      "median_ms": 32.39125001709908,
       "n": 56,
       "where": "local CPU"
     },
@@ -32,7 +32,7 @@
     "MRR": 0.8120879120879121,
     "n": 56,
     "latency": {
-      "median_ms": 1132.514200056903,
+      "median_ms": 1148.325499962084,
       "n": 56,
       "where": "local CPU"
     },
@@ -45,7 +45,7 @@
     "MRR": 0.8188350340136054,
     "n": 56,
     "latency": {
-      "median_ms": 1256.178200012073,
+      "median_ms": 1281.6401500022039,
       "n": 56,
       "where": "local CPU"
     },
@@ -58,7 +58,7 @@
     "MRR": 0.8489670868347339,
     "n": 56,
     "latency": {
-      "median_ms": 15.127049875445664,
+      "median_ms": 35.77609988860786,
       "n": 56,
       "where": "local CPU"
     },
@@ -71,7 +71,7 @@
     "MRR": 0.5849038948549319,
     "n": 56,
     "latency": {
-      "median_ms": 16.178749967366457,
+      "median_ms": 21.771450177766383,
       "n": 56,
       "where": "local CPU"
     },
@@ -89,6 +89,32 @@
       "where": "network round trip to Cohere, incl. TLS keep-alive reuse"
     },
     "cost_per_1k": 0.002088947368421053
+  },
+  "cohere-v5-pro-direct": {
+    "R@1": 0.8928571428571429,
+    "R@3": 1.0,
+    "R@5": 1.0,
+    "MRR": 0.943452380952381,
+    "n": 56,
+    "latency": {
+      "median_ms": 317.76184996124357,
+      "n": 20,
+      "where": "network round trip to Cohere, incl. TLS keep-alive reuse"
+    },
+    "cost_per_1k": 0.0016689473684210524
+  },
+  "cohere-v5-fast-direct": {
+    "R@1": 0.875,
+    "R@3": 0.9821428571428571,
+    "R@5": 1.0,
+    "MRR": 0.9300595238095237,
+    "n": 56,
+    "latency": {
+      "median_ms": 307.201899937354,
+      "n": 20,
+      "where": "network round trip to Cohere, incl. TLS keep-alive reuse"
+    },
+    "cost_per_1k": 0.0011294736842105263
   },
   "cohere-v4-rerank": {
     "R@1": 0.7857142857142857,

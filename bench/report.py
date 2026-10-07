@@ -23,6 +23,10 @@ PAIRS = [
     ("minilm-gold-en", "cohere-v4-direct"),
     ("ml-minilm-direct", "cohere-v4-direct"),
     ("cohere-v4-direct", "cohere-v4-rerank"),
+    # Embed 5 vs Embed 4, all at 1024 dims on raw Arabic
+    ("cohere-v4-direct", "cohere-v5-pro-direct"),
+    ("cohere-v4-direct", "cohere-v5-fast-direct"),
+    ("cohere-v5-fast-direct", "cohere-v5-pro-direct"),
 ]
 
 # The disagreement report files each question under the FIRST of these pairs that disagrees on it
