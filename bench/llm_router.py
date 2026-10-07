@@ -2,7 +2,7 @@
 
 Two variants of the same call:
 
-- CLASSIFY_SYSTEM (prompts/classify_system.txt) asks for `topic_en`, "3-8 ENGLISH keywords
+- CLASSIFY_SYSTEM asks for `topic_en`, "3-8 ENGLISH keywords
   describing the topic". The topic string alone is searched; the question is discarded.
 - TRANSLATE_SYSTEM is the same prompt with exactly one field swapped: `topic_en` -> `query_en`, a
   faithful full translation.
@@ -17,12 +17,49 @@ import hashlib
 import json
 import time
 from dataclasses import dataclass
-from pathlib import Path
 
 from .embedders import CACHE_DIR, NO_SDK_RETRIES, cohere_client, text_key, with_backoff
 
-PROMPT_DIR = Path(__file__).resolve().parent / "prompts"
-CLASSIFY_SYSTEM = (PROMPT_DIR / "classify_system.txt").read_text(encoding="utf-8")
+# The exact system prompt used for the cached results. Editing it changes the cache key and
+# means re-running the LLM calls.
+CLASSIFY_SYSTEM = """You are the intent router for Twin, a Saudi personal-finance assistant.
+
+Classify the user's message and extract any purchase details. Reply with JSON only:
+
+{
+  "intent": "purchase_simulation" | "financial_question" | "product_advice" | "chitchat",
+  "item": string | null,            // what is being bought, 1-3 words, lowercase ("car", "iphone", "gym subscription")
+  "price": number | null,           // amount in SAR, digits only. "120k" -> 120000
+  "recurring": boolean,             // true if this is a per-month commitment, not a one-off
+  "financing_option": string | null,// "cash" | "finance" | "wait" if the user named one
+  "income_change_pct": number | null,// e.g. -20 for "what if my salary drops 20%"
+  "topic_en": string                 // 3-8 ENGLISH keywords describing the topic, ALWAYS
+                                     // in English even for Arabic messages. Used to search
+                                     // an English knowledge base.
+                                     // e.g. "buying a car cash vs murabaha financing"
+}
+
+Rules:
+- purchase_simulation: the user is considering spending money, asking whether they can
+  afford something, comparing paying cash vs financing, asking to delay a purchase, or
+  asking what happens if their income changes. Anything with a price or an income change.
+- financial_question: general advice with no specific transaction (zakat, budgeting,
+  emergency funds, how murabaha works).
+- product_advice: the user asks which bank/Alinma products suit them, or asks to see or
+  compare Alinma's products (savings account, financing, credit cards), with no specific
+  transaction to simulate. "What Alinma products are good for me?" is product_advice; a
+  question with a price stays purchase_simulation.
+- chitchat: greetings, thanks, "who are you", small talk.
+- Resolve references against the conversation history. If the user says "what if I wait
+  six months?" and a 120000 SAR car was just discussed, return that item and price with
+  financing_option "wait".
+- "300 SAR per month" / "monthly subscription" -> recurring: true, price: 300.
+- Never guess a price that was not stated or previously discussed. Use null.
+
+The message may be in English or Arabic. Classify Arabic exactly the same way, and return
+`item` in the SAME language the user wrote in ("سيارة" for an Arabic message, "car" for an
+English one)   it is shown back to them. Prices are always plain digits: "120 ألف" -> 120000.
+"""
 
 _TOPIC_FIELD = """\
   "topic_en": string                 // 3-8 ENGLISH keywords describing the topic, ALWAYS
@@ -42,7 +79,7 @@ _TRANSLATION_FIELD = """\
                                      // and should I stop paying my car installments?\""""
 
 if CLASSIFY_SYSTEM.count(_TOPIC_FIELD) != 1:
-    raise RuntimeError("topic_en block not found verbatim in prompts/classify_system.txt")
+    raise RuntimeError("topic_en block not found verbatim in CLASSIFY_SYSTEM")
 TRANSLATE_SYSTEM = CLASSIFY_SYSTEM.replace(_TOPIC_FIELD, _TRANSLATION_FIELD)
 
 VALID_INTENTS = {"purchase_simulation", "financial_question", "product_advice", "chitchat"}

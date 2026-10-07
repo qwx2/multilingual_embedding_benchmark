@@ -233,8 +233,7 @@ def write_chart(path: Path, configs, records) -> None:
     y = np.arange(len(names))
 
     plt.rcParams.update({"font.family": ["Segoe UI", "DejaVu Sans"], "font.size": 10})
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11, 0.55 * len(names) + 2.2), sharey=True,
-                                 gridspec_kw={"wspace": 0.08})
+    fig, a1 = plt.subplots(figsize=(7.5, 0.55 * len(names) + 2.2))
     fig.patch.set_facecolor(SURFACE)
 
     def style(ax, title):
@@ -256,7 +255,7 @@ def write_chart(path: Path, configs, records) -> None:
     for i, n in enumerate(names):
         s = summarize([r["rank_section"] for r in by[n]])
         a1.plot([s["R@1"], s["R@5"]], [i, i], color=GRID, linewidth=2, zorder=2)
-    style(a1, "Section-level recall, all questions")
+    style(a1, "Section-level recall (56 Arabic questions)")
     a1.set_yticks(y, names, color=INK)
 
     # Hairline dividers between groups of rows that search the same kind of text.
@@ -266,27 +265,13 @@ def write_chart(path: Path, configs, records) -> None:
 
     for i in range(len(names) - 1):
         if group(names[i]) != group(names[i + 1]):
-            for ax in (a1, a2):
-                ax.axhline(i + 0.5, color=AXIS, linewidth=0.8, zorder=1)
+            a1.axhline(i + 0.5, color=AXIS, linewidth=0.8, zorder=1)
     for i, n in enumerate(names):
         if i == len(names) - 1 or group(names[i + 1]) != group(n):  # topmost row of each group
             a1.text(-0.01, i + 0.44, f"searches: {group(n)}" if group(n) != "floor" else "floor",
                     color=MUTED, fontsize=8, va="top", ha="left")
     legend_below = dict(loc="upper left", bbox_to_anchor=(0, -0.07), frameon=False, labelcolor=INK2, fontsize=9)
     a1.legend(ncol=3, **legend_below)
-
-    # Panel 2: R@3 on router-matched vs fallback questions
-    for i, n in enumerate(names):
-        m = summarize([r["rank_section"] for r in by[n] if not r["router_fell_back"]])["R@3"]
-        f = summarize([r["rank_section"] for r in by[n] if r["router_fell_back"]])["R@3"]
-        a2.plot([m, f], [i, i], color=GRID, linewidth=2, zorder=2)
-        a2.scatter([m], [i], s=64, color=SERIES[0], edgecolor=SURFACE, linewidth=2, zorder=3,
-                   label="router matched a keyword" if i == 0 else None)
-        a2.scatter([f], [i], s=64, color=SERIES[1], edgecolor=SURFACE, linewidth=2, zorder=3,
-                   label="no keyword (router fell back)" if i == 0 else None)
-    n_fb = sum(r["router_fell_back"] for r in by[names[0]])
-    style(a2, f"Recall@3: matched (n={len(by[names[0]]) - n_fb}) vs fallback (n={n_fb}) questions")
-    a2.legend(ncol=2, **legend_below)
 
     fig.savefig(path, dpi=160, bbox_inches="tight", facecolor=SURFACE)
     plt.close(fig)
